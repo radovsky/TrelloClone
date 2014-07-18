@@ -17,7 +17,7 @@ module Api
     end
 
     def index
-      @boards = current_user.boards
+      @boards = Board.all#current_user.boards
       render json: @boards
     end
 
