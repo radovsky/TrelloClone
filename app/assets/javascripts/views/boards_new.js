@@ -19,7 +19,7 @@ TrelloClone.Views.BoardsNew = Backbone.View.extend({
 		newBoard.save({}, {
 			success: function() {
 				TrelloClone.boards.add(newBoard);
-				Backbone.history.navigate("/", { trigger: true });
+				Backbone.history.navigate("boards/" + newBoard.id, { trigger: true });
 			}
 		});
 	}
