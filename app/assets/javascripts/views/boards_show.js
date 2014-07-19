@@ -1,4 +1,4 @@
-TrelloClone.Views.BoardsShow = Backbone.View.extend({
+TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 	
 	template: JST['boards/show'],
 	
@@ -16,8 +16,18 @@ TrelloClone.Views.BoardsShow = Backbone.View.extend({
 		
 		var $ul = this.$el.find('ul#lists');
 		this.model.lists().each(function(list) {
+			alert(list.escape('title'));
 			var $li = $('<li>');
 			$li.html(list.escape('title'));
+			$li.append($("<ul id='cards'></ul>"));
+			var $ul2 = $li.find('ul#cards');
+			
+			list.cards().each(function(card) {
+				var $li2 = $('<li>');
+				$li2.html(card.escape('title'));
+				$ul2.append($li2);
+			});
+			
 			$ul.append($li);
 		});
 		
