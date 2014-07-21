@@ -1,0 +1,18 @@
+<form>
+	
+	<input type="hidden" 
+		   name="card[list_id]" 
+		   value="<%= list.escape("id") %>">
+		   
+	<label for="cardName">card me</label>
+	<br>
+	<input type="text" 
+	       name="card[title]" 
+		   placeholder="make it a good one" 
+		   id="cardName">
+	<br>
+	<input type="submit">
+</form>
+
+<div class="preview">
+</div>

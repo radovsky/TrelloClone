@@ -10,6 +10,9 @@ TrelloClone.Views.BoardsIndex = Backbone.View.extend({
 			"sync",
 			this.render
 		);
+		
+		
+		
 	},
 	
 	render: function() {
