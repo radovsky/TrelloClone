@@ -18,8 +18,34 @@
 
 body{
 	padding-top: 50px;
+	
 }
 
-.list-show{
-	float: left;
+.list-show, .placeholder{
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+.destroy-card {
+	display: none;
+}
+
+//.card-individual:hover .destroy-card{
+//	display: inline-block;
+//}
+
+.lists{
+	
+	//border: solid 1px green;
+}
+.list-title{
+	//border: solid 1px red;
+}
+
+.card-title{
+	//border: solid 1px blue;
+}
+
+.cards{
+	//border: solid 1px orange;
 }
