@@ -14,8 +14,9 @@ TrelloClone.Models.Board = Backbone.Model.extend({
 	},
 	
 	lists: function() {
-		this._lists = this._lists ||
-		new TrelloClone.Collections.BoardLists({ board: this });
+		if (this._lists === undefined) {
+			this._lists = new TrelloClone.Collections.BoardLists([], { board: this });
+		}
 		return this._lists;
 	},
 	
