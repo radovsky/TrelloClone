@@ -1,6 +1,9 @@
 TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 	className: 'boards',
+	
 	template: JST['boards/show'],
+	
+	url: "api/boards/:id",
 	
 	initialize: function() {
 		this.listenTo(
@@ -41,7 +44,7 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 				return subview.model === list;
 			}
 		);
-		this.removeSubview(".lists", subview)
+		this.removeSubview(".lists", subview);
 	},
 	
 	addList: function(list) {
@@ -58,16 +61,37 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 		
 		this.$el.html(content);
 		this.attachSubviews();
-		
-		this.$(".lists").sortable({
+		var that = this;
+		$(".lists").sortable({
 			forcePlaceholderSize: true,
-			handle: '.list-title'
+			handle: '.list-title',
+			
+			update: function(event, ui) {
+				var data = $(this).sortable('serialize');
+				alert(!!data);
+				$.ajax({
+					data: data,
+					type: 'PATCH',
+					url: "api/boards/16"
+				});
+				// var $lists = $('.list-show');
+				// $lists.each(function(index) {
+				// 	var $list = $($lists[index]);
+				// 	var id = $list.attr('data-list-id');
+				// 	var listModel = that.model.lists().get(id);
+				// 	listModel.save({ 'ord': index });
+				// });
+			}
 		});
 		
 		$(".cards").sortable({
-					forcePlaceholderSize: true,
-					handle: '.card-title'
-				});
+			connectWith: ".cards",
+			forcePlaceholderSize: true,
+			handle: '.card-title',
+			update: function( event, ui ) {
+				console.log('uhhh');
+			}
+		});
 		
 		return this;
 	}
