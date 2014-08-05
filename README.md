@@ -8,5 +8,5 @@ Everybody loves some drag and drop!
 - JQuery
 - etc.
 
-Visit us [here](http://www.radovsky.com/trellino).
+Visit it out [here](http://gr-trellino.herokuapp.com).
 Created by [Gabe Radovsky](http://www.radovsky.com).
