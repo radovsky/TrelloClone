@@ -1,5 +1,5 @@
 ## Trello Clone
-Everybody loves some drag and drop!
+Everybody loves some drag and drop! Create boards, lists and cards, and then rearrange them to your liking.
 
 ####Built with:
 - Ruby on Rails
