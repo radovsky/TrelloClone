@@ -68,19 +68,11 @@ TrelloClone.Views.BoardsShow = Backbone.CompositeView.extend({
 			
 			update: function(event, ui) {
 				var data = $(this).sortable('serialize');
-				alert(!!data);
 				$.ajax({
 					data: data,
 					type: 'PATCH',
 					url: "api/boards/16"
 				});
-				// var $lists = $('.list-show');
-				// $lists.each(function(index) {
-				// 	var $list = $($lists[index]);
-				// 	var id = $list.attr('data-list-id');
-				// 	var listModel = that.model.lists().get(id);
-				// 	listModel.save({ 'ord': index });
-				// });
 			}
 		});
 		

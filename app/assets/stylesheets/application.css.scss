@@ -34,18 +34,16 @@ body{
 	display: inline-block;
 }
 
-.lists{
-	
-	//border: solid 1px green;
-}
-.list-title{
-	//border: solid 1px red;
+.list-show {
+    background-color:darkgrey;
+    border:1px solid black;
 }
 
 .card-title{
-	//border: solid 1px blue;
+    background-color:lightgrey;
+    border:1px solid black;
 }
 
-.cards{
-	//border: solid 1px orange;
+ul {
+    list-style:none;
 }
