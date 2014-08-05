@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.0'
 gem 'backbone-on-rails'
 gem 'bcrypt'
 gem 'bootstrap-sass'
