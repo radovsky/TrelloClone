@@ -38,11 +38,17 @@ body{
     background-color:darkgrey;
     border:1px solid black;
     margin: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .card-title{
     background-color:lightgrey;
     border:1px solid black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 ul {
