@@ -1,7 +1,7 @@
 <h2>All The Boards</h2>
 <ul id='boards'>
 	<% boards.each(function(board) { %>
-		<li>
+		<li class="board-show">
 			<a href='#/boards/<%= board.id %>'>
 				<%= board.escape('title') %>
 			</a>

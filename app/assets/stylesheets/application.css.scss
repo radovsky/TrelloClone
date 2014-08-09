@@ -21,11 +21,17 @@ body{
 	background-color:steelblue;
 }
 
-.list-show, .placeholder{
+.list-show, .placeholder, .board-show{
 	width: 200px;
 	display: inline-block;
 	vertical-align: top;
 }
+
+.board-show {
+    min-height: 100px;
+    text-color: darkblue;
+}
+
 .destroy-card {
 	display: none;
 }
@@ -34,7 +40,7 @@ body{
 	display: inline-block;
 }
 
-.list-show {
+.list-show, .board-show {
     background-color:darkgrey;
     border:1px solid black;
     margin: 3px;
@@ -54,4 +60,8 @@ body{
 
 ul {
     list-style:none;
+}
+
+button ,input {
+    margin: 3px;
 }
