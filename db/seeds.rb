@@ -1,29 +1,44 @@
-u1 = User.create(email: 'ripe@gmail.com', password: 'password')
-u2 = User.create(email: 'thejamaicandave@gmail.com', password: 'password')
+u1 = User.create(email: 'guest', password: 'password')
 
-b1 = u1.boards.create(title: 'Workout')
-b2 = u1.boards.create(title: 'Jamaica')
-b3 = u2.boards.create(title: 'Bouncy')
+b1 = u1.boards.create(title: "Help I'm a Board!")
+b2 = u1.boards.create(title: 'Horde Board')
+b3 = u2.boards.create(title: 'Smorgasbord')
 
 l1 = b1.lists.create(title: 'todo')
 l2 = b1.lists.create(title: 'doing')
 l3 = b1.lists.create(title: 'done')
 
-c1 = l3.cards.create(title: 'squats', description: 'feel the burn')
-c2 = l3.cards.create(title: 'pushups', description: 'ooh ouch')
-c3 = l3.cards.create(title: 'situps', description: 'ouchy')
+l4 = b2.lists.create(title: 'todo')
+l5 = b2.lists.create(title: 'doing')
+l6 = b2.lists.create(title: 'done')
 
-c4 = l1.cards.create(title: 'squats', description: 'feel the burn')
-c5 = l1.cards.create(title: 'pushups', description: 'ooh ouch')
-c6 = l1.cards.create(title: 'situps', description: 'ouchy')
+l7 = b3.lists.create(title: 'todo')
+l8 = b3.lists.create(title: 'doing')
+l9 = b3.lists.create(title: 'done')
 
-c7 = l2.cards.create(title: 'squats', description: 'feel the burn')
-c8 = l2.cards.create(title: 'pushups', description: 'ooh ouch')
-c9 = l2.cards.create(title: 'situps', description: 'ouchy')
+l3.cards.create(title: 'Weasels Ripped my Face')
+l3.cards.create(title: 'Sheik Yerbouti')
 
-i1 = c1.items.create(done: false, title: 'mocha')
-i2 = c1.items.create(done: true, title: 'mocha')
-i3 = c1.items.create(done: true, title: 'cookie')
+l1.cards.create(title: 'My guitar wants to kill your mama')
+l1.cards.create(title: 'Billy the Mountain')
 
-b1.members = [u2]
-b1.save
+l2.cards.create(title: 'Bobby Brown')
+l2.cards.create(title: 'Hot Rats')
+
+l4.cards.create(title: 'Kill everything until the Atlantic')
+l4.cards.create(title: 'Take a shower')
+
+l5.cards.create(title: 'Pillage, Pillage, Pillage')
+l5.cards.create(title: 'Kill everyone in mainland Eurasia')
+
+l6.cards.create(title: 'Pay tribute to Genghis')
+l6.cards.create(title: 'Ride horse real good and shoot arrows')
+
+l7.cards.create(title: 'lutefisk')
+l7.cards.create(title: 'lingonberries')
+
+l8.cards.create(title: 'lefsa')
+l8.cards.create(title: 'more fish')
+
+l9.cards.create(title: 'roots')
+l9.cards.create(title: 'rotten shark')
