@@ -40,8 +40,16 @@ body{
 	display: inline-block;
 }
 
-.list-show, .board-show {
+.list-show {
     background-color:rgb(227,227,227);
+}
+
+.board-show {
+    background-color:rgb(30,98,139);
+    color:white;
+}
+
+.list-show, .board-show {
     margin: 5px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -76,17 +84,15 @@ a#show-back {
 .navbar-default {
     background-color:rgb(30,98,139);
     border:none;
-    height:40px;
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     color:rgb(135,172,193);
 }
 
-ul.lists {
+ul.lists, ul#boards {
     margin-left: 5px;
-    padding: 0
-    
+    padding: 0;
 }
 
 h2.board-title {
@@ -94,6 +100,12 @@ h2.board-title {
     margin-left:20px;
     font-size:18px;
     font-weight:bold;
+}
+
+div.board-title {
+    font-size:16px;
+    font-weight:bold;
+    margin:10px;
 }
 
 h3.list-title {

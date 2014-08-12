@@ -1,10 +1,12 @@
 <h2>All The Boards</h2>
 <ul id='boards'>
 	<% boards.each(function(board) { %>
-		<li class="board-show">
 			<a href='#/boards/<%= board.id %>'>
-				<%= board.escape('title') %>
+                <li class="board-show col-xs-12 col-md-3">
+				    <div class="board-title">
+                        <%= board.escape('title') %>
+                    </div>
+                </li>
 			</a>
-		</li>
 	<% }) %>
 </ul>
