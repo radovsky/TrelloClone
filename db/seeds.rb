@@ -2,7 +2,7 @@ u1 = User.create(email: 'guest', password: 'password')
 
 b1 = u1.boards.create(title: "Help I'm a Board!")
 b2 = u1.boards.create(title: 'Horde Board')
-b3 = u2.boards.create(title: 'Smorgasbord')
+b3 = u1.boards.create(title: 'Smorgasbord')
 
 l1 = b1.lists.create(title: 'todo')
 l2 = b1.lists.create(title: 'doing')
