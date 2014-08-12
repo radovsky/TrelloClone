@@ -1,6 +1,7 @@
 TrelloClone.Views.BoardsIndex = Backbone.View.extend({
 	
 	template: JST["boards/index"],
+    
 	tagName: "ul",
 
 	initialize: function(options) {
@@ -10,9 +11,6 @@ TrelloClone.Views.BoardsIndex = Backbone.View.extend({
 			"sync",
 			this.render
 		);
-		
-		
-		
 	},
 	
 	render: function() {
@@ -26,6 +24,8 @@ TrelloClone.Views.BoardsIndex = Backbone.View.extend({
 		var boardNewView = new TrelloClone.Views.BoardsNew({
 			collection: this.collection
 		});
+        
+        $("body").addClass('rootpage');
 		
 		this.$el.append(boardNewView.render().$el);
 		

@@ -6,10 +6,6 @@ TrelloClone.Models.Board = Backbone.Model.extend({
 			this.lists().set(jsonResp.lists, { parse: true });
 			delete jsonResp.lists;
 		}
-		// if (jsonResp.members) {
-		// 	this.members().set(jsonResp.members, { parse: true });
-		// 	delete jsonResp.members;
-		// }
 		return jsonResp;
 	},
 	
@@ -18,11 +14,5 @@ TrelloClone.Models.Board = Backbone.Model.extend({
 			this._lists = new TrelloClone.Collections.BoardLists([], { board: this });
 		}
 		return this._lists;
-	},
-	
-	// members: function() {
-	// 	this._members = this._members ||
-	// 	new TrelloClone.Collections.BoardMembers({ board: this });
-	// 	return this._members;
-	// }
+	}
 });
