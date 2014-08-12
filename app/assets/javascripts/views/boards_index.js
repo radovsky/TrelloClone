@@ -27,7 +27,7 @@ TrelloClone.Views.BoardsIndex = Backbone.View.extend({
         
         $("body").addClass('rootpage');
 		
-		this.$el.append(boardNewView.render().$el);
+        // this.$el.append(boardNewView.render().$el);
 		
 		return this;
 	}
