@@ -36,8 +36,20 @@ body{
 	display: none;
 }
 
-.card-individual:hover .destroy-card{
-	display: inline-block;
+//.card-individual:hover .destroy-card {
+//    display: inline-block;
+//}
+
+.card-title:hover {
+    background-color: rgb(240,240,240);
+}
+
+h3.list-title:hover {
+    cursor:pointer;
+}
+
+.card-individual:hover {
+    cursor:pointer;
 }
 
 .list-show {
@@ -47,6 +59,11 @@ body{
 .board-show {
     background-color:rgb(30,98,139);
     color:white;
+}
+
+.board-show:hover {
+    background-color:rgb(20,88,129);
+    cursor:pointer;
 }
 
 .list-show, .board-show {
@@ -63,6 +80,12 @@ body{
     -moz-border-radius: 3px;
     border-radius: 3px;
     margin: 2px;
+    border-bottom:1px solid #ccc;
+    min-height:32px;
+    margin-right:7px;
+    margin-bottom:7px;
+    padding-left:7px;
+    padding-top:5px;
 }
 
 ul {
@@ -90,7 +113,7 @@ a#show-back {
     color:rgb(135,172,193);
 }
 
-ul.lists, ul#boards {
+ul.lists, ul#boards, ul.cards {
     margin-left: 5px;
     padding: 0;
 }
